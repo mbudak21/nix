@@ -16,10 +16,13 @@
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
 
-
-  security.sudo.extraRules = [
-    { users = [ "myusername" ];
-      options = [ "NOPASSWD" ];
+  security.sudo.extraRules= [
+    {  users = [ "nyverin" ];
+      commands = [
+         { command = "ALL" ;
+           options= [ "NOPASSWD" ];
+        }
+      ];
     }
   ];
 
