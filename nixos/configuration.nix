@@ -16,6 +16,13 @@
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
 
+
+  security.sudo.extraRules = [
+    { users = [ "myusername" ];
+      options = [ "NOPASSWD" ];
+    }
+  ];
+
   nixpkgs.overlays = [ inputs.polymc.overlay ];
 
   networking.hostName = "nixos"; # Define your hostname.
