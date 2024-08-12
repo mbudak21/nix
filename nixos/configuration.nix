@@ -26,6 +26,19 @@
     }
   ];
 
+  systemd.services.fan-boost = {
+    description = "Fan Boost Control Service";
+    after = [ "network.target" ];
+    wantedBy = [ "multi-user.target" ];
+
+    serviceConfig = {
+      Type = "simple";
+      ExecStart = "/home/nyverin/.cargo/bin/fan_control.sh";
+      Restart = "always";
+      User = "nyverin";
+    };
+  };
+  
   nixpkgs.overlays = [ inputs.polymc.overlay ];
 
   networking.hostName = "nixos"; # Define your hostname.

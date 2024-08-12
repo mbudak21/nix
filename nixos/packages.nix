@@ -111,6 +111,9 @@
     openconnect
     teams-for-linux
     pavucontrol
+    
+    lm_sensors
+    bc
   ];
 
   fonts.packages = with pkgs; [
