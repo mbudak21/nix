@@ -119,6 +119,7 @@
         "waybar"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
+        "/home/nyverin/Documents/fan_control.sh"
       ];
 
       bind = [
