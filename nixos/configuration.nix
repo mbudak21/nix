@@ -19,6 +19,11 @@
        adblock
        hidePodcasts
        shuffle # shuffle+ (special characters are sanitized out of extension names)
+       betterGenres
+       volumePercentage
+       playingSource
+       songStats
+       powerBar
      ];
      theme = spicePkgs.themes.catppuccin;
      colorScheme = "mocha";
