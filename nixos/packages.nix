@@ -15,7 +15,6 @@
     wofi
     mpv
     kdenlive
-    discord
     gparted
     zoom-us
     pcmanfm-qt
