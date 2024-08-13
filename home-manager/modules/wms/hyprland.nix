@@ -107,11 +107,7 @@
         render_ahead_of_time = false;
         disable_hyprland_logo = true;
       };
-
-      windowrule = [
-        "float, ^(imv)$"
-        "float, ^(mpv)$"
-      ];
+  
 
       exec-once = [
         "swww init"
@@ -126,7 +122,6 @@
         "$mainMod, Return, exec, alacritty"
         "$mainMod, i, exec, chromium"
         "$mainMod, Q, killactive,"
-        "$mainMod, M, exit,"
         "$mainMod, E, exec, dolphin"
         "$mainMod, space, togglefloating,"
         "$mainMod, F, fullscreen,"
