@@ -9,15 +9,10 @@
     audacity
     chromium
     telegram-desktop
-    alacritty
     obs-studio
-    rofi
-    wofi
-    mpv
     kdenlive
     gparted
     zoom-us
-    pcmanfm-qt
     polymc
 
     # Coding stuff

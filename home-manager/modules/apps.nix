@@ -65,4 +65,13 @@
     catppuccin.enable = true;
     font = "JetBrains Mono 16";
   };
+
+  programs.git.delta = {
+    enable = true;
+  };
+
+  programs.mpv = {
+    enable = true;
+  };
+  
 }
