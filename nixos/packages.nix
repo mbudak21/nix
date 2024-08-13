@@ -110,6 +110,7 @@
     openconnect
     teams-for-linux
     pavucontrol
+    jamesdsp
     
     lm_sensors
     bc
