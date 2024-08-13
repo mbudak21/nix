@@ -11,5 +11,6 @@
     ./hyprland.nix
     ./trim.nix
     ./bluetooth.nix
+    ./hosts.nix
   ];
 }
