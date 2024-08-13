@@ -12,9 +12,14 @@
     };
 
     polymc.url = "github:PolyMC/PolyMC";
+
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, catppuccin, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-stable, catppuccin, home-manager, spicetify-nix, ... }@inputs:
 
     let
       system = "x86_64-linux";
@@ -32,6 +37,7 @@
       modules = [
         ./nixos/configuration.nix
         catppuccin.nixosModules.catppuccin
+        inputs.spicetify-nix.nixosModules.default
       ];
     };
 
@@ -40,6 +46,7 @@
       modules = [ 
         ./home-manager/home.nix
         catppuccin.homeManagerModules.catppuccin 
+        inputs.spicetify-nix.homeManagerModules.default
       ];
     };
   };
