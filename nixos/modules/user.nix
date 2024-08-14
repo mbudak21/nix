@@ -1,8 +1,6 @@
 { pkgs, ... }: {
-  programs.zsh.enable = true;
-
   users = {
-    defaultUserShell = pkgs.zsh;
+    defaultUserShell = pkgs.bash;
 
     users.nyverin = {
       isNormalUser = true;
