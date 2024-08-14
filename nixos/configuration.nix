@@ -55,7 +55,7 @@
       fi
     '';
   };
-   
+     
   nixpkgs.overlays = [ inputs.polymc.overlay ];
 
   networking.hostName = "nixos"; # Define your hostname.
