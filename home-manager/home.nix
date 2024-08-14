@@ -1,7 +1,7 @@
 {
 
   imports = [
-    ./zsh.nix
+    ./fish.nix
     ./modules/bundle.nix
   ];
 
