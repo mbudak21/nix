@@ -19,6 +19,10 @@
       alias v "hx"
       alias se "sudoedit"
       alias ff "fastfetch"
+
+      function fish_command_not_found --on-event fish_command_not_found
+        echo "$argv: command not found"
+      end
     '';
 
   };
