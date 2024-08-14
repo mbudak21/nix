@@ -14,6 +14,8 @@
     gparted
     zoom-us
     polymc
+    helix
+    mosh
 
     # Coding stuff
     gnumake
