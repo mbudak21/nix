@@ -100,7 +100,12 @@
     libsForQt5.qt5ct
     qt5ct
     libsForQt5.breeze-icons 
-    papirus-nord
+    numix-icon-theme-circle
+    catppuccin-papirus-folders
+    colloid-icon-theme
+    catppuccin-gtk
+    catppuccin-kde
+    catppuccin-qt5ct
     pkgs.vesktop
     vscode
     webcord-vencord
@@ -109,6 +114,7 @@
     teams-for-linux
     pavucontrol
     jamesdsp
+    gvfs
     
     lm_sensors
     bc

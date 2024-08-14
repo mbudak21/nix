@@ -55,6 +55,24 @@
       fi
     '';
   };
+
+  programs.thunar.enable = true;
+  programs.xfconf.enable = true;
+  services.tumbler.enable = true; 
+  services.gvfs.enable = true; # Mount, trash, and other functionalities
+
+  environment.variables.GTK_THEME = "catppuccin-mocha-blue-standard+normal";
+  environment.variables.XCURSOR_THEME = "catppuccin-mocha-blue-cursors";
+  environment.variables.XCURSOR_SIZE = "24";
+  environment.variables.HYPRCURSOR_THEME = "catppuccin-mocha-blue-cursors";
+  environment.variables.HYPRCURSOR_SIZE = "24";
+
+  programs.thunar.plugins = with pkgs.xfce; [
+    thunar-archive-plugin
+    thunar-volman
+  ];
+
+  environment.sessionVariables.DEFAULT_BROWSER = "${pkgs.chromium}/bin/chromium";
      
   nixpkgs.overlays = [ inputs.polymc.overlay ];
 

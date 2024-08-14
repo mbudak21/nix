@@ -1,7 +1,10 @@
 {inputs, pkgs, ...}: {
   gtk = {
     enable = true;
-    catppuccin.icon.enable = true;
+    iconTheme = {
+      name = "Adwaita-dark";
+      package = pkgs.adwaita-icon-theme;
+    };
     catppuccin.gnomeShellTheme = true;
     catppuccin.icon.accent = "blue";
     catppuccin = {
