@@ -115,7 +115,6 @@
     pavucontrol
     jamesdsp
     gvfs
-    grc
     
     lm_sensors
     bc
