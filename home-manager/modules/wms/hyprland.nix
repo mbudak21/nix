@@ -6,7 +6,7 @@
     settings = {
       "$mainMod" = "SUPER";
 
-    monitor = [
+      monitor = [
         "eDP-1,1920x1080@240,0x0,1"
         "HDMI-A-1,1920x1080@144,1920x0,1"
       ];
@@ -42,7 +42,9 @@
       general = {
         gaps_in = 5;
         gaps_out = 20;
-        border_size = 2;
+        border_size = 3;
+        "col.active_border" = "rgba(b4befeff)";
+        "col.inactive_border" = "rgba(595959aa)";
 
         layout = "dwindle";
 
@@ -86,9 +88,8 @@
         ];
       };
 
-
       dwindle = {
-        pseudotile = false; # master switch for pseudotiling. 
+        pseudotile = false; # master switch for pseudotiling.
         preserve_split = true; # you probably want this
       };
 
@@ -107,7 +108,6 @@
         render_ahead_of_time = false;
         disable_hyprland_logo = true;
       };
-  
 
       exec-once = [
         "swww init"
@@ -126,7 +126,7 @@
         "$mainMod, space, togglefloating,"
         "$mainMod, F, fullscreen,"
         "$mainMod, D, exec, rofi -show drun"
-        "$mainMod, P, exec, rofi -show run"
+        "$mainMod, P, exec, fuzzel"
         "$mainMod, J, togglesplit, # dwindle"
 
         # Move focus with mainMod + arrow keys
@@ -184,15 +184,15 @@
         ", XF86AudioLowerVolume, exec, pamixer -d 5 "
         ", XF86AudioMute, exec, pamixer -t"
         ", XF86AudioMicMute, exec, pamixer --default-source -m"
-        
+
         # Brightness control
         ", XF86MonBrightnessDown, exec, brightnessctl set 5%- "
         ", XF86MonBrightnessUp, exec, brightnessctl set +5% "
 
         # Configuration files
         '', Print, exec, grim -g "$(slurp)" - | swappy -f -''
-        ''$mainMod SHIFT, P, exec, grim -g "$(slurp)" - | swappy -f -''      
-        
+        ''$mainMod SHIFT, P, exec, grim -g "$(slurp)" - | swappy -f -''
+
         "$mainMod, B, exec, pkill -SIGUSR1 waybar"
         "$mainMod, W, exec, pkill -SIGUSR2 waybar"
       ];

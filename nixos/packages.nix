@@ -75,13 +75,13 @@
     seatd
     xdg-desktop-portal-hyprland
     xdg-desktop-portal-gtk
-    
+
     # Sound
     pipewire
     pulseaudio
     pamixer
 
-    # GPU stuff 
+    # GPU stuff
     amdvlk
     rocm-opencl-icd
     glaxnimate
@@ -99,7 +99,7 @@
     libsForQt5.qtstyleplugin-kvantum
     libsForQt5.qt5ct
     qt5ct
-    libsForQt5.breeze-icons 
+    libsForQt5.breeze-icons
     numix-icon-theme-circle
     catppuccin-papirus-folders
     colloid-icon-theme
@@ -115,7 +115,7 @@
     pavucontrol
     jamesdsp
     gvfs
-    
+
     lm_sensors
     bc
   ];
