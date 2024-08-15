@@ -118,14 +118,14 @@
       ];
 
       bind = [
-        "$mainMod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
+        "$mainMod, V, exec, cliphist list | fuzzel -d | cliphist decode | wl-copy"
         "$mainMod, Return, exec, alacritty"
         "$mainMod, i, exec, chromium"
         "$mainMod, Q, killactive,"
         "$mainMod, E, exec, dolphin"
         "$mainMod, space, togglefloating,"
         "$mainMod, F, fullscreen,"
-        "$mainMod, D, exec, rofi -show drun"
+        "$mainMod, D, exec, fuzzel"
         "$mainMod, P, exec, fuzzel"
         "$mainMod, J, togglesplit, # dwindle"
 
