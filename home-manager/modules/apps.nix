@@ -49,10 +49,10 @@ in
         background = "1e1e2eff";
         text = "cdd6f4ff";
         match = "f38ba8ff";
-        selection = "b4befeaa";
+        selection = "89b4faaa";
         selection-match = "f38ba8ff";
         selection-text = "cdd6f4ff";
-        border = "b4befeff";
+        border = "89b4faff";
       };
       border = {
         radius = 10;
