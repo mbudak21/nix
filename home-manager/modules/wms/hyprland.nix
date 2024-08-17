@@ -119,7 +119,7 @@
 
       bind = [
         "$mainMod, V, exec, cliphist list | fuzzel -d | cliphist decode | wl-copy"
-        "$mainMod, Return, exec, alacritty"
+        "$mainMod, Return, exec, kitty"
         "$mainMod, i, exec, chromium"
         "$mainMod, Q, killactive,"
         "$mainMod, E, exec, dolphin"

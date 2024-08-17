@@ -20,6 +20,36 @@ in
     };
   };
 
+  programs.kitty = {
+      enable = true;
+      font.name = "JetBrains Mono Bold";
+      shellIntegration.enableFishIntegration = true;
+      settings = {
+        confirm_os_window_close = 0;
+        scrollback_lines = 10000;
+        enable_audio_bell = "no";
+        window_padding_width = 12;
+        shell = "${pkgs.fish}/bin/fish";
+        font_size = 13;
+    };
+  };
+
+    programs.yazi = {
+    enable = true;
+    enableFishIntegration = true;
+
+    settings = {
+      log = { enabled = false; };
+      manager = {
+        show_hidden = false;
+        sort_by = "modified";
+        sort_dir_first = true;
+        sort_reverse = true;
+      };
+    };
+
+  };
+
   programs.bat = {
     enable = true;
   };
@@ -36,7 +66,7 @@ in
         font = "JetBrainsMono Nerd Font:weight=bold:size=14";
         line-height = 25;
         fields = "name,generic,comment,categories,filename,keywords";
-        terminal = "alacritty";
+        terminal = "kitty";
         prompt = "' ➜  '";
         icon-theme = "Papirus-Dark";
         layer = "top";
@@ -123,7 +153,7 @@ in
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
-    terminal = "alacritty";
+    terminal = "kitty";
     theme = {
       "*" = {
         font = "FiraCode Nerd Font Medium 14";
