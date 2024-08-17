@@ -19,6 +19,7 @@
 
     # Coding stuff
     gnumake
+    just
     gcc
     nodejs
     python
