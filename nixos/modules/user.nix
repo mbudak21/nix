@@ -11,5 +11,5 @@
   };
 
   # Enable automatic login for the user.
-  services.getty.autologinUser = "nyverin";
+  # services.getty.autologinUser = "nyverin";
 }
