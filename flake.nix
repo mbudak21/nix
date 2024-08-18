@@ -41,7 +41,7 @@
       ];
     };
 
-    homeConfigurations.nyverin = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations.gabechu = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};
       modules = [ 
         ./home-manager/home.nix
