@@ -25,6 +25,7 @@
 
     # Coding stuff
     gnumake
+    just
     gcc
     nodejs
     python
@@ -121,6 +122,7 @@
     pavucontrol
     jamesdsp
     gvfs
+    xorg.xauth
 
     lm_sensors
     bc
