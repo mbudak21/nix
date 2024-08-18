@@ -127,7 +127,7 @@
 
       src = pkgs.fetchurl {
         url = "https://downloader.cursor.sh/linux/appImage/x64";
-        hash = "sha256-3TJLfrBd+TyFVqommSqs8ncNpDFHZ5v8SGL4b62QYUQ="; # Will need to be changed as they modify their path. 
+        hash = "sha256-3TJLfrbD+TfFVqdmmSqs8ncNpDFHZ5v8SGL4b62QYUQ="; # Will need to be changed as they modify their path. 
       };                                                              # Their url doesn't have version's so this will give error once they update it.
     })
   ];
