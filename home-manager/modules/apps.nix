@@ -21,25 +21,27 @@ in
   };
 
   programs.kitty = {
-      enable = true;
-      font.name = "JetBrains Mono Bold";
-      shellIntegration.enableFishIntegration = true;
-      settings = {
-        confirm_os_window_close = 0;
-        scrollback_lines = 10000;
-        enable_audio_bell = "no";
-        window_padding_width = 12;
-        shell = "${pkgs.fish}/bin/fish";
-        font_size = 13;
+    enable = true;
+    font.name = "JetBrains Mono Bold";
+    shellIntegration.enableFishIntegration = true;
+    settings = {
+      confirm_os_window_close = 0;
+      scrollback_lines = 10000;
+      enable_audio_bell = "no";
+      window_padding_width = 12;
+      shell = "${pkgs.fish}/bin/fish";
+      font_size = 13;
     };
   };
 
-    programs.yazi = {
+  programs.yazi = {
     enable = true;
     enableFishIntegration = true;
 
     settings = {
-      log = { enabled = false; };
+      log = {
+        enabled = false;
+      };
       manager = {
         show_hidden = false;
         sort_by = "modified";
@@ -275,6 +277,12 @@ in
 
   programs.mpv = {
     enable = true;
+  };
+
+  programs.starship = {
+    enable = true;
+    enableFishIntegration = true;
+    settings = pkgs.lib.importTOML ./starship.toml;
   };
 
 }
