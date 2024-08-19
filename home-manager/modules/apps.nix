@@ -58,6 +58,13 @@ in
 
   programs.fish = {
     enable = true;
+    shellInit = ''
+      function starship_transient_prompt_func
+        starship module character
+      end
+      starship init fish | source
+      enable_transience
+    '';
   };
 
   programs.fuzzel = {
@@ -280,6 +287,7 @@ in
   };
 
   programs.starship = {
+    catppuccin.enable = false;
     enable = true;
     enableFishIntegration = true;
     settings = pkgs.lib.importTOML ./starship.toml;
