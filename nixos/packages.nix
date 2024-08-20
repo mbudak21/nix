@@ -126,6 +126,8 @@
 
     lm_sensors
     bc
+
+    (callPackage ./cursorsh.nix {})
   ];
 
   fonts.packages = with pkgs; [
