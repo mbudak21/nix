@@ -114,7 +114,7 @@
     openconnect
     teams-for-linux
     pavucontrol
-    jamesdsp
+    easyeffects
     gvfs
     xorg.xauth
 
