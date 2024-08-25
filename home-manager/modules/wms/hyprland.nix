@@ -54,7 +54,7 @@
         rounding = 10;
 
         blur = {
-          enabled = true;
+          enabled = false;
           size = 16;
           passes = 2;
           new_optimizations = true;
