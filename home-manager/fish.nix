@@ -4,6 +4,9 @@
     
     interactiveShellInit = ''
       set fish_greeting # Disable greeting
+      if test -f /etc/secrets/ku.env
+        source /etc/secrets/ku.env
+      end
 
       # Set up aliases
       set flakeDir ~/nix
