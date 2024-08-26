@@ -17,9 +17,14 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    kuvpn = {
+      url = "github:ealtun21/kuvpn";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, catppuccin, home-manager, spicetify-nix, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-stable, catppuccin, kuvpn, home-manager, spicetify-nix, ... }@inputs:
 
     let
       system = "x86_64-linux";
