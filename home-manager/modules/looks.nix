@@ -26,7 +26,7 @@
   catppuccin.pointerCursor.accent = "blue";
   home = {
     pointerCursor = {
-      size = 24;
+      size = 32;
       gtk.enable = true;
       x11 = {
         enable = true;

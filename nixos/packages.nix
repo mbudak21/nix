@@ -117,6 +117,7 @@
     easyeffects
     gvfs
     xorg.xauth
+    remmina
 
     lm_sensors
     bc
