@@ -19,7 +19,7 @@
     };
 
     kuvpn = {
-      url = "github:ealtun21/kuvpn";
+      url = "github:ealtun21/kuvpn?ref=auto-login";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

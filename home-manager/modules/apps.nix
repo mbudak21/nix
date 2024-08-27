@@ -121,6 +121,9 @@ in
   programs.helix = {
     enable = true;
     settings = {
+      editor.lsp = {
+        display-inlay-hints = true;
+      };
       editor.cursor-shape = {
         normal = "block";
         insert = "bar";
