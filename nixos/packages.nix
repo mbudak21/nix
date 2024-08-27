@@ -1,13 +1,18 @@
 { pkgs, inputs, ... }: {
   nixpkgs.config = {
     allowUnfree = true;
-    permittedInsecurePackages = ["python-2.7.18.8" "electron-25.9.0"];
+    permittedInsecurePackages = [
+      "python-2.7.18.8"
+      "electron-25.9.0"
+    ];
   };
 
   environment.systemPackages = with pkgs; [
     # Desktop apps
     audacity
     chromium
+    google-chrome
+    firefox
     telegram-desktop
     obs-studio
     kdenlive
