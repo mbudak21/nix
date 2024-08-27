@@ -12,7 +12,7 @@
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
-        "XCURSOR_SIZE,24"
+        "XCURSOR_SIZE,32"
         "QT_QPA_PLATFORM,wayland"
         "XDG_SCREENSHOTS_DIR,~/screens"
       ];
@@ -51,7 +51,7 @@
         rounding = 10;
 
         blur = {
-          enabled = true;
+          enabled = false;
           size = 16;
           passes = 2;
           new_optimizations = true;

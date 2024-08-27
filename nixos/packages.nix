@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{ pkgs, inputs, ... }: {
   nixpkgs.config = {
     allowUnfree = true;
     permittedInsecurePackages = [
@@ -120,12 +119,15 @@
     openconnect
     teams-for-linux
     pavucontrol
-    jamesdsp
+    easyeffects
     gvfs
     xorg.xauth
+    remmina
 
     lm_sensors
     bc
+
+    inputs.kuvpn.packages.${pkgs.system}.default
 
     (callPackage ./cursorsh.nix {})
   ];
