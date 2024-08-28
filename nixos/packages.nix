@@ -56,6 +56,7 @@
     lazygit
     bluez
     bluez-tools
+    tlrc
 
     # GUI utils
     feh
