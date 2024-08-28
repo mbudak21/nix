@@ -10,7 +10,6 @@
   environment.systemPackages = with pkgs; [
     # Desktop apps
     audacity
-    chromium
     google-chrome
     firefox
     telegram-desktop
@@ -129,7 +128,7 @@
 
     inputs.kuvpn.packages.${pkgs.system}.default
 
-    (callPackage ./cursorsh.nix {})
+    #(callPackage ./cursorsh.nix {})
   ];
 
   fonts.packages = with pkgs; [
