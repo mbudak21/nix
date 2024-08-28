@@ -1,4 +1,5 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, ... }:
+{
   nixpkgs.config = {
     allowUnfree = true;
     permittedInsecurePackages = [
@@ -28,6 +29,7 @@
     nodejs
     python
     (python3.withPackages (ps: with ps; [ requests ]))
+    jetbrains.idea-community-bin
 
     # CLI utils
     neofetch
@@ -57,6 +59,7 @@
     bluez
     bluez-tools
     tlrc
+    gh
 
     # GUI utils
     feh
