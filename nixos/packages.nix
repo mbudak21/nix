@@ -30,6 +30,8 @@
     python
     (python3.withPackages (ps: with ps; [ requests ]))
     jetbrains.idea-community-bin
+    go
+    gopls
 
     # CLI utils
     neofetch

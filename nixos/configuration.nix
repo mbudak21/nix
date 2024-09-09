@@ -1,33 +1,34 @@
-{ inputs, pkgs, ...}: {
+{ inputs, pkgs, ... }:
+{
   imports = [
     ./hardware-configuration.nix
     ./packages.nix
     ./modules/bundle.nix
   ];
 
-  disabledModules = [
-    ./modules/xserver.nix
-  ];
+  disabledModules = [ ./modules/xserver.nix ];
+
+  services.tlp.enable = true;
 
   programs.spicetify =
-   let
-     spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
-   in
-   {
-     enable = true;
-     enabledExtensions = with spicePkgs.extensions; [
-       adblock
-       hidePodcasts
-       shuffle # shuffle+ (special characters are sanitized out of extension names)
-       betterGenres
-       volumePercentage
-       playingSource
-       songStats
-       powerBar
-     ];
-     theme = spicePkgs.themes.catppuccin;
-     colorScheme = "mocha";
-   };
+    let
+      spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
+    in
+    {
+      enable = true;
+      enabledExtensions = with spicePkgs.extensions; [
+        adblock
+        hidePodcasts
+        shuffle # shuffle+ (special characters are sanitized out of extension names)
+        betterGenres
+        volumePercentage
+        playingSource
+        songStats
+        powerBar
+      ];
+      theme = spicePkgs.themes.catppuccin;
+      colorScheme = "mocha";
+    };
 
   programs.steam = {
     enable = true;
@@ -35,12 +36,14 @@
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
-  
-  security.sudo.extraRules= [
-    {  users = [ "gabechu" ];
+
+  security.sudo.extraRules = [
+    {
+      users = [ "gabechu" ];
       commands = [
-         { command = "ALL" ;
-           options= [ "NOPASSWD" ];
+        {
+          command = "ALL";
+          options = [ "NOPASSWD" ];
         }
       ];
     }
@@ -59,13 +62,13 @@
   services.greetd = {
     enable = true;
     settings = {
-     default_session.command = ''
-      ${pkgs.greetd.tuigreet}/bin/tuigreet \
-        --time \
-        --asterisks \
-        --user-menu \
-        --cmd hyprland
-    '';
+      default_session.command = ''
+        ${pkgs.greetd.tuigreet}/bin/tuigreet \
+          --time \
+          --asterisks \
+          --user-menu \
+          --cmd hyprland
+      '';
     };
   };
 
@@ -73,10 +76,9 @@
     hyprland
   '';
 
-
   programs.thunar.enable = true;
   programs.xfconf.enable = true;
-  services.tumbler.enable = true; 
+  services.tumbler.enable = true;
   services.gvfs.enable = true; # Mount, trash, and other functionalities
 
   environment.variables.GTK_THEME = "catppuccin-mocha-blue-standard+normal";
@@ -91,7 +93,7 @@
   ];
 
   environment.sessionVariables.DEFAULT_BROWSER = "${pkgs.chromium}/bin/chromium";
-     
+
   nixpkgs.overlays = [ inputs.polymc.overlay ];
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -100,7 +102,10 @@
 
   i18n.defaultLocale = "en_US.UTF-8"; # Select internationalisation properties.
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ]; # Enabling flakes
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ]; # Enabling flakes
 
   catppuccin.enable = true;
 
