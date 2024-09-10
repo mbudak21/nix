@@ -62,6 +62,7 @@
     bluez-tools
     tlrc
     gh
+    btop
 
     # GUI utils
     feh
