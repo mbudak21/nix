@@ -21,6 +21,8 @@
     polymc
     helix
     mosh
+    quickemu
+    blender
 
     # Coding stuff
     gnumake
