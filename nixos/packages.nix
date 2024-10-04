@@ -23,12 +23,12 @@
     mosh
     quickemu
     blender
+    obsidian
 
     # Coding stuff
     gnumake
     just
     gcc
-    nodejs
     python
     (python3.withPackages (ps: with ps; [ requests ]))
     jetbrains.idea-community-bin
@@ -123,6 +123,7 @@
     pkgs.vesktop
     vscode
     webcord-vencord
+    qpwgraph # For screenshare fix
     chromedriver
     openconnect
     teams-for-linux
