@@ -1,7 +1,8 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   programs.fish = {
     enable = true;
-    
+
     interactiveShellInit = ''
       set fish_greeting # Disable greeting
       if test -f /etc/secrets/ku.env
@@ -14,6 +15,9 @@
       alias upd "nix flake update $flakeDir"
       alias upg "sudo nixos-rebuild switch --upgrade --flake $flakeDir"
       alias hms "home-manager switch --flake $flakeDir"
+      alias stop-vpn "sudo systemctl stop wg-quick-wg0.service"
+      alias restart-vpn "sudo systemctl restart wg-quick-wg0.service"
+      alias start-vpn "sudo systemctl start wg-quick-wg0.service"
       alias conf "hx $flakeDir/nixos/configuration.nix"
       alias pkgs "hx $flakeDir/nixos/packages.nix"
       alias ll "ls -l"

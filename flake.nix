@@ -19,40 +19,51 @@
     };
 
     kuvpn = {
-      url = "github:ealtun21/kuvpn";
+      url = "github:KUACC-VALAR-HPC-KOC-UNIVERSITY/kuvpn";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, catppuccin, kuvpn, home-manager, spicetify-nix, ... }@inputs:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      nixpkgs-stable,
+      catppuccin,
+      kuvpn,
+      home-manager,
+      spicetify-nix,
+      ...
+    }@inputs:
 
     let
       system = "x86_64-linux";
-    in {
+    in
+    {
 
-    # nixos - system hostname
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      specialArgs = {
-        pkgs-stable = import nixpkgs-stable {
-          inherit system;
-          config.allowUnfree = true;
+      # nixos - system hostname
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          pkgs-stable = import nixpkgs-stable {
+            inherit system;
+            config.allowUnfree = true;
+          };
+          inherit inputs system;
         };
-        inherit inputs system;
+        modules = [
+          ./nixos/configuration.nix
+          catppuccin.nixosModules.catppuccin
+          inputs.spicetify-nix.nixosModules.default
+        ];
       };
-      modules = [
-        ./nixos/configuration.nix
-        catppuccin.nixosModules.catppuccin
-        inputs.spicetify-nix.nixosModules.default
-      ];
-    };
 
-    homeConfigurations.gabechu = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.${system};
-      modules = [ 
-        ./home-manager/home.nix
-        catppuccin.homeManagerModules.catppuccin 
-        inputs.spicetify-nix.homeManagerModules.default
-      ];
+      homeConfigurations.gabechu = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${system};
+        modules = [
+          ./home-manager/home.nix
+          catppuccin.homeManagerModules.catppuccin
+          inputs.spicetify-nix.homeManagerModules.default
+        ];
+      };
     };
-  };
 }

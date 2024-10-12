@@ -11,7 +11,6 @@
   environment.systemPackages = with pkgs; [
     # Desktop apps
     audacity
-    google-chrome
     firefox
     telegram-desktop
     obs-studio
@@ -22,8 +21,8 @@
     helix
     mosh
     quickemu
-    blender
     obsidian
+    wireshark
 
     # Coding stuff
     gnumake
@@ -34,6 +33,7 @@
     jetbrains.idea-community-bin
     go
     gopls
+    nil
 
     # CLI utils
     neofetch
@@ -65,6 +65,9 @@
     tlrc
     gh
     btop
+    nextdns
+    dnsproxy
+    duf
 
     # GUI utils
     feh
@@ -132,6 +135,7 @@
     gvfs
     xorg.xauth
     remmina
+    wireguard-tools
 
     lm_sensors
     bc
