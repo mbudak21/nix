@@ -70,6 +70,8 @@
     dnsproxy
     duf
     hyprpaper
+    fzf
+    ripgrep
 
     # GUI utils
     feh
