@@ -1,4 +1,5 @@
-{inputs, pkgs, ...}: {
+{ inputs, pkgs, ... }:
+{
   gtk = {
     enable = true;
     iconTheme = {
@@ -23,7 +24,7 @@
   };
 
   catppuccin.pointerCursor.enable = true;
-  catppuccin.pointerCursor.accent = "blue";
+  catppuccin.pointerCursor.accent = "dark";
   home = {
     pointerCursor = {
       size = 32;

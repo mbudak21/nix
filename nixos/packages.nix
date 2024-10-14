@@ -23,6 +23,7 @@
     quickemu
     obsidian
     wireshark
+    libreoffice-qt6-still
 
     # Coding stuff
     gnumake
@@ -68,6 +69,7 @@
     nextdns
     dnsproxy
     duf
+    hyprpaper
 
     # GUI utils
     feh

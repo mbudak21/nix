@@ -35,28 +35,28 @@
     };
   };
 
-  networking.wg-quick.interfaces = {
-    wg0 = {
-      address = [
-        "10.0.0.5/24"
-      ];
-      dns = [
-        "1.1.1.1"
-      ];
-      privateKeyFile = "/home/gabechu/.wireguard/private";
+  # networking.wg-quick.interfaces = {
+  #   wg0 = {
+  #     address = [
+  #       "10.0.0.5/24"
+  #     ];
+  #     dns = [
+  #       "1.1.1.1"
+  #     ];
+  #     privatekeyfile = "/home/gabechu/.wireguard/private";
 
-      peers = [
-        {
-          publicKey = "ExKzeW0jNPCrDAZ7LUCGQR1hi3rEFc6OyWVMF4xX8Hg=";
-          allowedIPs = [
-            "0.0.0.0/0"
-            "::/0"
-          ];
-          endpoint = "217.160.190.27:51820";
-          persistentKeepalive = 25;
-        }
-      ];
-    };
-  };
+  #     peers = [
+  #       {
+  #         publickey = "exkzew0jnpcrdaz7lucgqr1hi3refc6oywvmf4xx8hg=";
+  #         allowedips = [
+  #           "0.0.0.0/0"
+  #           "::/0"
+  #         ];
+  #         endpoint = "217.160.190.27:51820";
+  #         persistentkeepalive = 25;
+  #       }
+  #     ];
+  #   };
+  # };
 
 }
