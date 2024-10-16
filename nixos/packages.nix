@@ -12,6 +12,7 @@
     # Desktop apps
     audacity
     firefox
+    opera
     telegram-desktop
     obs-studio
     kdenlive

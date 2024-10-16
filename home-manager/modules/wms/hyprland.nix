@@ -110,6 +110,7 @@
       };
 
       exec-once = [
+        "swww-daemon"
         "swww img ~/Wallpapers/catpuccin-mocha/hollow-knight.png"
         "waybar"
         "wl-paste --type text --watch cliphist store"
