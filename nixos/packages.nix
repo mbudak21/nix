@@ -22,9 +22,9 @@
     helix
     mosh
     quickemu
-    obsidian
     wireshark
     libreoffice-qt6-still
+    skypeforlinux
 
     # Coding stuff
     gnumake
@@ -105,7 +105,6 @@
 
     # GPU stuff
     amdvlk
-    rocm-opencl-icd
     glaxnimate
 
     # Screenshotting
@@ -120,7 +119,6 @@
     spice-vdagent
     libsForQt5.qtstyleplugin-kvantum
     libsForQt5.qt5ct
-    qt5ct
     libsForQt5.breeze-icons
     numix-icon-theme-circle
     catppuccin-papirus-folders
@@ -145,7 +143,7 @@
     lm_sensors
     bc
 
-    inputs.kuvpn.packages.${pkgs.system}.default
+    #inputs.kuvpn.packages.${pkgs.system}.default
 
     #(callPackage ./cursorsh.nix {})
   ];
